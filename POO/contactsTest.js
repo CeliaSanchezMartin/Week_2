@@ -9,6 +9,6 @@ let vera = new myLib1.Person(1.70, 60, 1995, ["bailar", "esquiar", "viajar"]);
 
 let contactos = new myLib.Contacts;
 
-contactos.arrayPersons = [{pepe}, {juan}, {vera}]
+contactos.arrayPersons = [pepe, juan, vera]// no necesito ponerle llaves ya que ha sido declarado antes.
 
 console.log(contactos.printAll());
