@@ -24,10 +24,12 @@ export class Library{
     }
 
     //toString.
-    public toString():void{
+    public toString():string{
+        let toString:string ="";
         for (let i =0; i < this.books.length; i++){
-        console.log("Book" + (i+1) + ": \n" + this.books[i].toString());
+         toString += ("Book" + (i+1) + ": \n" + this.books[i].toString() + "\n");
     }
+        return toString;
     };
 
     public getNumberOfBooks ():number{

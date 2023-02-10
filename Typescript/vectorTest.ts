@@ -3,11 +3,11 @@ import { Vector } from "./vector";
 
 let vector:Vector = new Vector (10,10);
 
-vector.print();
+//vector.print();
 
 let vector2:Vector = new Vector (10,10);
-vector2.print();
+//vector2.print();
 
 console.log(vector.add(vector2));
-console.log(vector.subs(vector2));
-console.log(vector.mult(vector2));
+//console.log(vector.subs(vector2));
+//console.log(vector.mult(vector2));

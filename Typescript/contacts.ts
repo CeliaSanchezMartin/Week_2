@@ -8,7 +8,7 @@ import { Person } from "./person";
     constructor(){
         this.people = [];
     };
-
+//Método
  public printCalendar():void{
     console.log(this.people);
     

@@ -1,53 +1,60 @@
 //Reto 8.
 export class Vector {
-    private elments: number [];
-    n:number;
-    k:number;
+    private elements: number [];
+    
 
     constructor(n:number, k:number){
-        this.n = n;
-        this.k = k;
-        this.elments = [];
+        this.elements = [];
         for ( let i = 1 ; i < n + 1 ; i ++){
-            this.elments.push(Math.floor((Math.random() * k + 1)));
+            this.elements.push(Math.floor((Math.random() * k + 1)));
         };
     }
 
     //Métodos.
+    public getElement(): number[]{
+        return this.elements
+    };
+
+    public setElements(newElement:number[]): void{
+        this.elements = newElement
+    };
 
     public print():void{
-        console.log(this.elments);
+        console.log(this.elements);
         
     };
 
     public add(v1:Vector): Vector{
         let vectorDevuelto:Vector = new Vector(0,0);
-        for(let  i = 0; i < this.elments.length; i++){
-        vectorDevuelto.elments.push(this.elments[i] + v1.elments[i])
-    }
+        let v1Param:number[] = v1.getElement();
+        if(this.elements.length == v1Param.length){
+        for(let  i = 0; i < this.elements.length; i++){
+        vectorDevuelto.elements.push(this.elements[i] + v1.elements[i])
+    }}
      return vectorDevuelto;
+
     };
 
     public subs(v1:Vector): Vector{
         let vectorDevuelto:Vector = new Vector(0,0);
-        for(let  i = 0; i < this.elments.length; i++){
-        vectorDevuelto.elments.push(this.elments[i] - v1.elments[i])
+        for(let  i = 0; i < this.elements.length; i++){
+        vectorDevuelto.elements.push(this.elements[i] - v1.elements[i])
     }
      return vectorDevuelto 
     };
 
     public mult(v1:Vector): Vector{
         let vectorDevuelto:Vector = new Vector(0,0);
-        for(let  i = 0; i < this.elments.length; i++){
-        vectorDevuelto.elments.push(this.elments[i] * v1.elments[i])
+        for(let  i = 0; i < this.elements.length; i++){
+        vectorDevuelto.elements.push(this.elements[i] * v1.elements[i])
     }
      return vectorDevuelto 
     };
 
     public multNumber(n:number): Vector{
         let vectorDevuelto:Vector = new Vector (0,0);
-        for(let  i = 0; i < this.elments.length; i++){
-          vectorDevuelto.elments.push(this.elments[i] * n)
+        for(let  i = 0; i < this.elements.length; i++){
+          vectorDevuelto.elements.push(this.elements[i] * n)
     }
      return vectorDevuelto;
     };

@@ -16,6 +16,6 @@ let biblioteca: Library = new Library([libro, libro2],
 console.log(biblioteca.getAddress());
 console.log(biblioteca.getManager());
 
-biblioteca.toString();
+console.log(biblioteca.toString());
 console.log(biblioteca.getNumberOfBooks());
 console.log(biblioteca.findByAuthor("Joseph Smith"));

@@ -12,14 +12,15 @@ export class Person {
         this.adress = adress;
 
     };
-
+    //Setters
     public setAdress(adress:string):void{
         this.adress = adress;
-    }
-
+    };
+    //Getters
     public getAddress():string{
        return this.adress;
-    }
+    };
+    //Métodos
     public printName():void{
         console.log(this.name);
         
