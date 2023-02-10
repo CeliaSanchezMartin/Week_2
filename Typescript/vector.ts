@@ -37,17 +37,21 @@ export class Vector {
 
     public subs(v1:Vector): Vector{
         let vectorDevuelto:Vector = new Vector(0,0);
+        let v1Param:number[] = v1.getElement();
+        if(this.elements.length == v1Param.length){
         for(let  i = 0; i < this.elements.length; i++){
         vectorDevuelto.elements.push(this.elements[i] - v1.elements[i])
-    }
+    }}
      return vectorDevuelto 
     };
 
     public mult(v1:Vector): Vector{
         let vectorDevuelto:Vector = new Vector(0,0);
+        let v1Param:number[] = v1.getElement();
+        if(this.elements.length == v1Param.length){
         for(let  i = 0; i < this.elements.length; i++){
         vectorDevuelto.elements.push(this.elements[i] * v1.elements[i])
-    }
+    }}
      return vectorDevuelto 
     };
 
